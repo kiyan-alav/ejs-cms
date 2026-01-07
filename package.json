@@ -1,0 +1,34 @@
+{
+  "name": "ejs-cms",
+  "version": "1.0.0",
+  "description": "Ejs CMS",
+  "main": "./src/server.ts",
+  "scripts": {
+    "dev": "node --watch src --exec ts-node src/server.ts",
+    "start": "node dist/server.js",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kiyan-alav/ejs-cms.git"
+  },
+  "author": "Kiyan Alavi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kiyan-alav/ejs-cms/issues"
+  },
+  "homepage": "https://github.com/kiyan-alav/ejs-cms#readme",
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
+    "@types/node": "^25.0.3",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.2.1",
+    "mongoose": "^9.1.2",
+    "zod": "^4.3.5"
+  }
+}
