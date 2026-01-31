@@ -1,60 +1,55 @@
-root/
- ├─ public/                   <-- (NEW) فایل‌های استاتیک که در مرورگر لود می‌شوند
+src/
+ ├─ config/
+ │   ├─ db.ts
+ │   ├─ env.ts
+ │   └─ view.ts            # EJS config
+ │
+ ├─ modules/
+ │   ├─ user/
+ │   │   ├─ user.model.ts
+ │   │   ├─ user.service.ts
+ │   │   ├─ user.view.controller.ts
+ │   │   ├─ user.routes.ts
+ │   │   ├─ user.validation.ts
+ │   │   └─ user.types.ts
+ │   │
+ │   ├─ product/
+ │   │   └─ ...
+ │
+ ├─ views/
+ │   ├─ layouts/
+ │   │   └─ main.ejs
+ │   │
+ │   ├─ partials/
+ │   │   ├─ head.ejs
+ │   │   ├─ header.ejs
+ │   │   └─ footer.ejs
+ │   │
+ │   ├─ user/
+ │   │   ├─ list.ejs
+ │   │   ├─ profile.ejs
+ │   │   └─ edit.ejs
+ │   │
+ │   ├─ product/
+ │   │   └─ ...
+ │   │
+ │   └─ errors/
+ │       ├─ 404.ejs
+ │       └─ 500.ejs
+ │
+ ├─ public/
  │   ├─ css/
- │   │   └─ style.css
- │   ├─ js/                   <-- اسکریپت‌های کلاینت (DOM manipulation)
- │   │   └─ main.js
+ │   ├─ js/
  │   └─ images/
  │
- ├─ views/                    <-- (NEW) تمام فایل‌های EJS در اینجا قرار می‌گیرند
- │   ├─ layouts/              <-- قالب‌های اصلی (Master layouts)
- │   │   └─ main-layout.ejs
- │   ├─ partials/             <-- قطعات کوچک و تکرار شونده
- │   │   ├─ header.ejs
- │   │   ├─ footer.ejs
- │   │   ├─ sidebar.ejs
- │   │   └─ flash-messages.ejs
- │   └─ pages/                <-- صفحات اصلی مربوط به ماژول‌ها
- │       ├─ dashboard/
- │       │   └─ index.ejs
- │       ├─ auth/
- │       │   ├─ login.ejs
- │       │   └─ register.ejs
- │       └─ user/
- │           ├─ profile.ejs
- │           └─ edit.ejs
+ ├─ middlewares/
+ │   ├─ auth.ts
+ │   ├─ errorHandler.ts
+ │   └─ viewLocals.ts
  │
- ├─ src/
- │   ├─ config/
- │   │   ├─ db.ts
- │   │   ├─ env.ts
- │   │   └─ session.ts        <-- (NEW) تنظیمات مربوط به Session/Cookies
- │   │
- │   ├─ modules/
- │   │   ├─ user/
- │   │   │   ├─ user.model.ts      <-- بدون تغییر (Mongoose Schema)
- │   │   │   ├─ user.service.ts    <-- بدون تغییر (منطق دیتابیس)
- │   │   │   ├─ user.controller.ts <-- (CHANGED) به جای JSON، تابع render صدا می‌زند
- │   │   │   ├─ user.routes.ts
- │   │   │   ├─ user.types.ts
- │   │   │   └─ user.dto.ts        <-- برای اعتبارسنجی فرم‌ها
- │   │   └─ product/
- │   │       └─ ...
- │   │
- │   ├─ middlewares/
- │   │   ├─ auth.middleware.ts     <-- (CHANGED) بررسی Session/Cookie به جای Bearer Token
- │   │   ├─ validateRequest.ts
- │   │   ├─ flash.middleware.ts    <-- (NEW) مدیریت پیام‌های موفقیت/خطا
- │   │   ├─ locals.middleware.ts   <-- (NEW) ارسال متغیرهای سراسری به تمام Viewها (مثل user info)
- │   │   └─ errorHandler.ts        <-- (CHANGED) رندر کردن صفحه 404 یا 500
- │   │
- │   ├─ utils/
- │   │   ├─ ApiError.ts            <-- هنوز می‌تواند مفید باشد اما کمتر استفاده می‌شود
- │   │   ├─ catchAsync.ts
- │   │   └─ logger.ts
- │   │
- │   ├─ app.ts
- │   └─ server.ts
+ ├─ utils/
+ │   ├─ catchAsync.ts
+ │   └─ logger.ts
  │
- ├─ tsconfig.json
- └─ package.json
+ ├─ app.ts
+ └─ server.ts

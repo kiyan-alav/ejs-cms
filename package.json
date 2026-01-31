@@ -4,7 +4,7 @@
   "description": "Ejs CMS",
   "main": "./src/server.ts",
   "scripts": {
-    "dev": "node --watch --env-file=.env --loader ts-node src/server.ts",
+    "dev": "node --watch --env-file=.env --import tsx src/server.ts",
     "start": "node dist/server.js",
     "build": "tsc"
   },

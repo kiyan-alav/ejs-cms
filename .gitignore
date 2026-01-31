@@ -9,7 +9,7 @@ yarn.lock
 pnpm-lock.yaml
 
 # --- Environment Variables ---
-.env.*
+# .env
 !.env.example
 
 # --- Logs ---
@@ -60,3 +60,5 @@ dump/
 
 # --- Optional: Docker ---
 docker-compose.override.yml
+
+.github
