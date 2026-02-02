@@ -1,7 +1,9 @@
+import cookieParser from "cookie-parser";
 import express from "express";
 import path from "path";
 import { setupViewEngine } from "./configs/view";
 import { errorHandler } from "./middlewares/errorHandler";
+import { flashMiddleware } from "./middlewares/flash";
 import { viewLocals } from "./middlewares/viewLocals";
 
 export const createApp = () => {
@@ -10,6 +12,10 @@ export const createApp = () => {
   // body parsers
   app.use(express.json());
   app.use(express.urlencoded({ extended: true }));
+
+  // cookie parser
+  app.use(cookieParser());
+  app.use(flashMiddleware);
 
   // static files
   app.use(express.static(path.join(process.cwd(), "src", "public")));

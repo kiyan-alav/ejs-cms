@@ -5,15 +5,15 @@ src/
  │   └─ view.ts            # EJS config
  │
  ├─ modules/
- │   ├─ user/
- │   │   ├─ user.model.ts
- │   │   ├─ user.service.ts
- │   │   ├─ user.view.controller.ts
- │   │   ├─ user.routes.ts
- │   │   ├─ user.validation.ts
- │   │   └─ user.types.ts
+ │   ├─ entity/
+ │   │   ├─ entity.model.ts
+ │   │   ├─ entity.service.ts
+ │   │   ├─ entity.view.controller.ts
+ │   │   ├─ entity.routes.ts
+ │   │   ├─ entity.validation.ts
+ │   │   └─ entity.types.ts
  │   │
- │   ├─ product/
+ │   ├─ entity2/
  │   │   └─ ...
  │
  ├─ views/
@@ -25,12 +25,12 @@ src/
  │   │   ├─ header.ejs
  │   │   └─ footer.ejs
  │   │
- │   ├─ user/
+ │   ├─ pageName/
  │   │   ├─ list.ejs
  │   │   ├─ profile.ejs
  │   │   └─ edit.ejs
  │   │
- │   ├─ product/
+ │   ├─ pageName2/
  │   │   └─ ...
  │   │
  │   └─ errors/
@@ -43,13 +43,12 @@ src/
  │   └─ images/
  │
  ├─ middlewares/
- │   ├─ auth.ts
  │   ├─ errorHandler.ts
  │   └─ viewLocals.ts
  │
  ├─ utils/
  │   ├─ catchAsync.ts
- │   └─ logger.ts
+ │   └─ AppError.ts
  │
  ├─ app.ts
  └─ server.ts
