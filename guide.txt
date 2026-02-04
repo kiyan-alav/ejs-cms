@@ -45,10 +45,12 @@ src/
  ├─ middlewares/
  │   ├─ errorHandler.ts
  │   └─ viewLocals.ts
+ │   └─ flash.ts
  │
  ├─ utils/
  │   ├─ catchAsync.ts
  │   └─ AppError.ts
+ │   └─ flash.ts
  │
  ├─ app.ts
  └─ server.ts
