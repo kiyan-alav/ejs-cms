@@ -3,13 +3,12 @@
   <div class="modal-content">
     <!-- ! Edit Course  ! -->
     <h1 class="modal-title">اضافه کردن دوره جدید</h1>
-    <form action="" class="edit-user-form">
+    <form action="/courses" method="POST" class="edit-user-form">
       <div class="input-field">
         <span><i class="fa fa-tag"></i></span>
         <input
           type="text"
-          id=""
-          name=""
+          name="title"
           placeholder="نام دوره"
           spellcheck="false"
         />
@@ -17,9 +16,8 @@
       <div class="input-field">
         <span><i class="fa fa-cash-register"></i></span>
         <input
-          type="text"
-          id=""
-          name=""
+          type="number"
+          name="price"
           placeholder="قیمت دوره"
           spellcheck="false"
         />
@@ -28,8 +26,7 @@
         <span><i class="fa fa-user"></i></span>
         <input
           type="text"
-          id=""
-          name=""
+          name="teacher"
           placeholder="مدرس دوره"
           spellcheck="false"
         />

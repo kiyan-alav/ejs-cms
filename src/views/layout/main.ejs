@@ -1,4 +1,13 @@
 <div class="container">
+  <% if (flash?.message) { %>
+    <div
+      id="flash-data"
+      data-type="<%= flash.type %>"
+      data-message="<%= flash.message %>">
+    </div>
+  <% } %>
+
+
   <!-- Sidebar -->
   <%- include('../partials/_sidebar.ejs') %>
   <!-- End Sidebar -->

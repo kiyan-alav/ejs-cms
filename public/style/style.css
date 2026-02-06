@@ -375,30 +375,81 @@ a.active {
 
 /* End Courses */
 
+.price-old {
+  text-decoration: line-through;
+  color: #999;
+  margin-left: 10px;
+}
+
+.price-final {
+  color: #2ecc71;
+  font-weight: bold;
+}
+
+.discount-badge {
+  background: #e74c3c;
+  color: white;
+  padding: 2px 6px;
+  font-size: 12px;
+  border-radius: 4px;
+}
+
+.toast {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  min-width: 250px;
+  padding: 14px 20px;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 14px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.3s ease;
+  z-index: 9999;
+}
+
+.toast.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.toast-success {
+  background: #16a34a;
+}
+
+.toast-error {
+  background: #dc2626;
+}
+
 @font-face {
   font-family: "shabnam";
-  src: url("/fonts/Shabnam-FD.eot") format("eot"),
+  src:
+    url("/fonts/Shabnam-FD.eot") format("eot"),
     url("/fonts/Shabnam-FD.ttf") format("truetype"),
     url("/fonts/Shabnam-FD.woff") format("woff");
 }
 
 @font-face {
   font-family: "shabnam-bold";
-  src: url("/fonts/Shabnam-Bold-FD.eot") format("eot"),
+  src:
+    url("/fonts/Shabnam-Bold-FD.eot") format("eot"),
     url("/fonts/Shabnam-Bold-FD.ttf") format("truetype"),
     url("/fonts/Shabnam-Bold-FD.woff") format("woff");
 }
 
 @font-face {
   font-family: "shabnam-light";
-  src: url("/fonts/Shabnam-Light-FD.eot") format("eot"),
+  src:
+    url("/fonts/Shabnam-Light-FD.eot") format("eot"),
     url("/fonts/Shabnam-Light-FD.ttf") format("truetype"),
     url("/fonts/Shabnam-Light-FD.woff") format("woff");
 }
 
 @font-face {
   font-family: "shabnam-medium";
-  src: url("/fonts/Shabnam-Medium-FD.eot") format("eot"),
+  src:
+    url("/fonts/Shabnam-Medium-FD.eot") format("eot"),
     url("/fonts/Shabnam-Medium-FD.ttf") format("truetype"),
     url("/fonts/Shabnam-Medium-FD.woff") format("woff");
 }

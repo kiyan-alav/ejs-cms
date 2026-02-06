@@ -4,16 +4,16 @@
   <div class="modal-content">
     <!-- ! Edit Course  ! -->
     <h1 class="modal-title">اعمال تخفیف همگانی</h1>
-    <form action="" class="edit-user-form">
+    <form action="/courses/discount" method="POST" class="edit-user-form">
       <div class="input-field">
         <span><i class="fa fa-tag"></i></span>
         <input
-          type="text"
-          id=""
-          name=""
-          class="discount-input"
+          type="number"
+          name="discount"
           placeholder="میزان تخفیف (درصد)"
-          spellcheck="false"
+          min="0"
+          max="100"
+          required
         />
       </div>
 

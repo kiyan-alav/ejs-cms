@@ -5,6 +5,7 @@ import { setupViewEngine } from "./configs/view";
 import { errorHandler } from "./middlewares/errorHandler";
 import { flashMiddleware } from "./middlewares/flash";
 import { viewLocals } from "./middlewares/viewLocals";
+import courseRoutes from "./modules/course/course.routes";
 
 export const createApp = () => {
   const app = express();
@@ -26,9 +27,13 @@ export const createApp = () => {
   // view locals (global variables for EJS)
   app.use(viewLocals);
 
+  app.use("/", courseRoutes);
+
   // ! routes
   app.get("/", (req, res) => {
-    res.render("pages/index", {});
+    res.render("pages/index", {
+      title: "EJS - CMS",
+    });
   });
 
   // 404 page

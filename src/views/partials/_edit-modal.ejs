@@ -4,39 +4,23 @@
   <div class="modal-content">
     <!-- ! Edit Course  ! -->
     <h1 class="modal-title">اطلاعات جدید را وارد کنید</h1>
-    <form action="" class="edit-user-form">
+    <form id="edit-course-form" method="POST" class="edit-user-form">
       <div class="input-field">
         <span><i class="fa fa-tag"></i></span>
-        <input
-          type="text"
-          id=""
-          name=""
-          placeholder="نام دوره"
-          spellcheck="false"
-        />
-      </div>
-      <div class="input-field">
-        <span><i class="fa fa-cash-register"></i></span>
-        <input
-          type="text"
-          id=""
-          name=""
-          placeholder="قیمت دوره"
-          spellcheck="false"
-        />
-      </div>
-      <div class="input-field">
-        <span><i class="fa fa-user"></i></span>
-        <input
-          type="text"
-          id=""
-          name=""
-          placeholder="مدرس دوره"
-          spellcheck="false"
-        />
+        <input type="text" name="title" id="edit-title" required />
       </div>
 
-      <button type="submit" class="update-btn btn">اپدیت دوره</button>
+      <div class="input-field">
+        <span><i class="fa fa-cash-register"></i></span>
+        <input type="number" name="price" id="edit-price" required />
+      </div>
+
+      <div class="input-field">
+        <span><i class="fa fa-user"></i></span>
+        <input type="text" name="teacher" id="edit-teacher" required />
+      </div>
+
+      <button type="submit" class="update-btn btn">آپدیت دوره</button>
     </form>
   </div>
 </div>
