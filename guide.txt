@@ -25,22 +25,14 @@ src/
  │   │   ├─ header.ejs
  │   │   └─ footer.ejs
  │   │
- │   ├─ pageName/
- │   │   ├─ list.ejs
- │   │   ├─ profile.ejs
- │   │   └─ edit.ejs
+ │   ├─ pages/
+ │   │   ├─ index.ejs
  │   │
- │   ├─ pageName2/
- │   │   └─ ...
  │   │
  │   └─ errors/
  │       ├─ 404.ejs
  │       └─ 500.ejs
  │
- ├─ public/
- │   ├─ css/
- │   ├─ js/
- │   └─ images/
  │
  ├─ middlewares/
  │   ├─ errorHandler.ts
@@ -54,3 +46,8 @@ src/
  │
  ├─ app.ts
  └─ server.ts
+public/
+ │   ├─ css/
+ │   ├─ js/
+ │   └─ images/
+ │   └─ fonts/

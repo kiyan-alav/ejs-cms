@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <title>Document</title>
+    <script src="/js/script.js" defer></script>
+  </head>
+  <body>
+    <!---------------------------------- modal -------------------------------- -->
+    <!-- delete course modal-->
+    <%- include('../partials/_delete-modal.ejs') %>
+
+    <!-- edit course modal-->
+    <%- include('../partials/_edit-modal.ejs') %>
+
+    <!-- add new course modal-->
+    <%- include('../partials/_add-modal.ejs') %>
+
+    <!-- add discounts modal-->
+    <%- include('../partials/_add-discounts-modal.ejs') %>
+
+    <!----------------------------------End modal -------------------------------- -->
+
+    <%- include('../layout/main.ejs') %>
+  </body>
+</html>

@@ -18,7 +18,7 @@ export const createApp = () => {
   app.use(flashMiddleware);
 
   // static files
-  app.use(express.static(path.join(process.cwd(), "src", "public")));
+  app.use(express.static(path.join(__dirname, "..", "public")));
 
   // view engine
   setupViewEngine(app);
@@ -27,6 +27,9 @@ export const createApp = () => {
   app.use(viewLocals);
 
   // ! routes
+  app.get("/", (req, res) => {
+    res.render("pages/index", {});
+  });
 
   // 404 page
   app.use((req, res) => {
